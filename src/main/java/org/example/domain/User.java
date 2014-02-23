@@ -5,13 +5,25 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Transient;
+
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String userName;
 	private String password;
-	
+	@OneToOne
 	private Person person;
+	
+	@Transient
 	private Collection<Role> roles = new ArrayList<Role>();
 	
 	public int getId() {

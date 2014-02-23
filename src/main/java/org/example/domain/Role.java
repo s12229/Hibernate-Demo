@@ -14,8 +14,6 @@ public class Role {
 	private Collection<Privilege> privileges = new ArrayList<Privilege>();
 	private Collection<User> users = new ArrayList<User>();
 	
-	
-
 	public Collection<Privilege> getPrivileges() {
 		return privileges;
 	}
