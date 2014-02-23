@@ -1,5 +1,6 @@
 package org.example.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,7 +12,7 @@ public class User {
 	private String password;
 	
 	private Person person;
-	private Set<Role> roles = new HashSet<Role>();
+	private Collection<Role> roles = new ArrayList<Role>();
 	
 	public int getId() {
 		return id;
@@ -37,12 +38,13 @@ public class User {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-	public Set<Role> getRoles() {
+	public Collection<Role> getRoles() {
 		return roles;
 	}
-	public void setRoles(Set<Role> roles) {
+	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
 	}
+	
 	
 	
 }
