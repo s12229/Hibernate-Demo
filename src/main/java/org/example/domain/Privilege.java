@@ -1,6 +1,8 @@
 package org.example.domain;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Privilege {
 
@@ -8,7 +10,15 @@ public class Privilege {
 	private String privilegeCode;
 	private String value;
 	
-	private Collection<Role> roles;
+	private Set<Role> roles=new HashSet<Role>();
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 	public int getId() {
 		return id;
@@ -34,13 +44,5 @@ public class Privilege {
 		this.value = value;
 	}
 
-	public Collection<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(Collection<Role> roles) {
-		this.roles = roles;
-	}
-	
 	
 }

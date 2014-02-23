@@ -1,6 +1,8 @@
 package org.example.domain;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Person {
 
@@ -9,7 +11,7 @@ public class Person {
 	private String surname;
 	private String nationalIdentificationNumber;
 	
-	private Collection<Address> addresses;
+	private Set<Address> addresses = new HashSet<Address>();
 	private User user;
 	
 	
@@ -53,13 +55,9 @@ public class Person {
 		this.nationalIdentificationNumber = nationalIdentificationNumber;
 	}
 
-	public Collection<Address> getAddresses() {
+	public Set<Address> getAddresses() {
 		return addresses;
 	}
 
-	public void setAddresses(Collection<Address> addresses) {
-		this.addresses = addresses;
-	}
-	
 	
 }
